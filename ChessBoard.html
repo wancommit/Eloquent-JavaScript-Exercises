@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ChessBoard</title>
+</head>
+
+<body>
+    <h2>ChessBoard</h2>
+
+
+
+
+
+    <script>
+        // “Write a program that creates a string that represents an 8×8 grid, 
+        // using newline characters to separate lines. At each position of the grid there is either a space or a "#" character. 
+        // The characters should form a chessboard.
+        // Passing this string to console.log should show something like this:”
+
+        // # # # #
+        // # # # # 
+        // # # # #
+        // # # # # 
+        // # # # #
+        // # # # # 
+        // # # # #
+        // # # # #
+
+        // “When you have a program that generates this pattern, define a binding size = 8 and change the program so that it works 
+        // for any size, outputting a grid of the given width and height.”
+
+        let size = 8;
+
+        let board = " "; // Start with an empty board
+
+        for (let y = 0; y < size; y++) { // Go through each row (from top to bottom):
+            for (let x = 0; x < size; x++) { // Inside each row, go through each column (left to right)
+                if ((x + y) % 2 == 0) { // If the row number + column number is even then blank
+                    board += " ";
+                } else {
+                    board += "#"; // If it’s odd, draw a #
+                }
+            }
+            board += "\n";
+        }
+
+        console.log(board);
+
+    </script>
+</body>
+
+</html>
